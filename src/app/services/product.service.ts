@@ -14,7 +14,7 @@ export class ProductService {
   constructor(private httpClient: HttpClient) { }
 
   getProducts():Observable<ListResponseModel<Product>> {
-    let newPath = this.apiURL+"products/getall"
+    let newPath = this.apiURL+"/products/getall"
     return this.httpClient
       .get<ListResponseModel<Product>>(newPath);
       
